@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: dodgerblue;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 20px;
+    }
+
+    .main {
+        display: flex;
+        min-height: 120vh;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        max-width: 1000px;
+        padding: 20px 50px;
+        border: 5px navy solid;
+        border-radius: 10px;
+        background-color: white;
+    }
+
+    .box1,
+    .box2 {
+        padding: 20px 50px;
+        max-width: 1000px;
+        background-color: white;
+    }
+
+    .box2-i {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .img-header {
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .img-header-div {
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px 0;
+    }
+
+    .label {
+        display: inline-block;
+        width: 90px;
+    }
+
+    .img-container {
+        /* text-align: center; */
+        width: 300px;
+        height: 150px;
+        margin: 20px;
+    }
+
+    .img {
+        width: 300px;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    .pt-1 {
+        padding-top: 0.8rem;
+    }
+
+    .pt-2 {
+        padding-top: 1.2rem;
+    }
+
+    .pb-2 {
+        padding-bottom: 1.2rem;
+    }
+
+    .d-flex {
+        display: flex;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .d-inline {
+        display: inline;
+    }
+
+    .d-inline-block {
+        display: inline-block;
+    }
+
+    .fw-600 {
+        font-weight: 600;
+    }
+
+    .output {
+        margin: 20px;
+        width: 300px;
+        height: 150px;
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="box1">
+            <h1 class="center">Introducing Myself</h1>
+            <hr styles="color: #082032;" />
+            <h1 styles="color: #F0A500; font-size: 30px;"></h1>
+            <div class="img-header-div">
+                <a href=""><img class="img-header" src="https://i.ibb.co/Wgwdy5g/Goe.jpg" /></a>
+            </div>
+            <p><span class="label pt-1">Name:</span><span class="value">Aljhon Geo R. Coliflores</span></p>
+
+            <p><span class="label pt-1">Address: </span> <span class="value">Las pinas, penaranda, Nueva Ecija.</span>
+            </p>
+
+            <p><span class="label pt-1">Contact No.:</span> <span class="value">09464074396</span></p>
+
+            <p><span class="label pt-1">Mother:</span> <span class="value">Kristal R. Coliflores</span></p>
+
+            <p><span class="label pt-1">Father:</span> <span class="value">Jhon Wesley Coliflores</span></p>
+
+            <p>
+                <span class="label pt-1">Siblings:</span> <span class="value">Kian Coliflores & Erth Kalem
+                    Coliflores</span>
+            </p>
+        </div>
+        <div class="box2">
+            <h2 class="pb-2 center">MY HOBBIES ARE:</h2>
+            <div class="box2-i">
+                <div class="img-container">
+                    <button onclick="basketball()" class="btn">
+                        <img class="img" src="https://i.ibb.co/d4f7Sbm/basketball1.jpg" />
+                    </button>
+                </div>
+                <p class="output d-none pt-2 center fw-600" onclick="basketballRet()"></p>
+                <div class="img-container">
+                    <button class="btn" onclick="badminton()">
+                        <img class="img" src='https://i.ibb.co/7jKPNBL/Badminton.jpg"' />
+                    </button>
+                </div>
+                <p class="output d-none pt-2 center fw-600" onclick="badmintonRet()"></p>
+                <div class="img-container">
+                    <button class="btn" onclick="watching()">
+                        <img class="img" src='https://i.ibb.co/Y7Yc3c4/Watching.jpg"' />
+                    </button>
+                </div>
+                <p class="output d-none pt-2 center fw-600" onclick="watchingRet()"></p>
+
+                <div class="img-container" d-block>
+                    <button class="btn" onclick="bike()">
+                        <img class="img" src="https://i.ibb.co/gzSHQpy/Bike.jpg" />
+                    </button>
+                </div>
+
+                <p class="output d-none pt-2 center fw-600" onclick="bikeRet()"></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function basketball() {
+            let btn4 = document.getElementsByClassName("btn")[0];
+            let img_c = document.getElementsByClassName("img-container")[0];
+            let output = document.getElementsByClassName("output")[0];
+            // btn4.innerHTML = "RIDING BICYCLE" + "<a href=''><img class='' img pb - 2' src='https://i.ibb.co/gzSHQpy/Bike.jpg'></a>";
+            output.classList.remove("d-none");
+            output.classList.add("d-block");
+            output.innerHTML = "PlAYING BASKETBALL";
+            img_c.classList.add("d-none");
+        }
+        function badminton() {
+            let btn4 = document.getElementsByClassName("btn")[1];
+            let img_c = document.getElementsByClassName("img-container")[1];
+            let output = document.getElementsByClassName("output")[1];
+            // btn4.innerHTML = "RIDING BICYCLE" + "<a href=''><img class='' img pb - 2' src='https://i.ibb.co/gzSHQpy/Bike.jpg'></a>";
+            output.classList.remove("d-none");
+            output.classList.add("d-block");
+            output.innerHTML = "PLAYING BADMINTON";
+            img_c.classList.add("d-none");
+        }
+        function watching() {
+            let btn4 = document.getElementsByClassName("btn")[2];
+            let img_c = document.getElementsByClassName("img-container")[2];
+            let output = document.getElementsByClassName("output")[2];
+            output.classList.remove("d-none");
+            output.classList.add("d-block");
+            output.innerHTML = "WATCHING PORN";
+            img_c.classList.add("d-none");
+        }
+        function bike() {
+            let btn4 = document.getElementsByClassName("btn")[3];
+            let img_c = document.getElementsByClassName("img-container")[3];
+            let output = document.getElementsByClassName("output")[3];
+            // btn4.innerHTML = "RIDING BICYCLE" + "<a href=''><img class='' img pb - 2' src='https://i.ibb.co/gzSHQpy/Bike.jpg'></a>";
+            output.classList.remove("d-none");
+            output.classList.add("d-block");
+            output.innerHTML = "RIDING BICYCLE";
+            img_c.classList.add("d-none");
+        }
+
+
+        // !BACK
+        function basketballRet() {
+            let btn4 = document.getElementsByClassName("btn")[0];
+            let img_c = document.getElementsByClassName("img-container")[0];
+            let output = document.getElementsByClassName("output")[0];
+            // btn4.innerHTML = "RIDING BICYCLE" + "<a href=''><img class='' img pb - 2' src='https://i.ibb.co/gzSHQpy/Bike.jpg'></a>";
+            output.classList.add("d-none");
+            output.classList.remove("d-block");
+            output.innerHTML = "RIDING BICYCLE";
+            img_c.classList.remove("d-none");
+        }
+        function badmintonRet() {
+            let btn4 = document.getElementsByClassName("btn")[1];
+            let img_c = document.getElementsByClassName("img-container")[1];
+            let output = document.getElementsByClassName("output")[1];
+            // btn4.innerHTML = "RIDING BICYCLE" + "<a href=''><img class='' img pb - 2' src='https://i.ibb.co/gzSHQpy/Bike.jpg'></a>";
+            output.classList.add("d-none");
+            output.classList.remove("d-block");
+
+            img_c.classList.remove("d-none");
+        }
+        function watchingRet() {
+            let btn4 = document.getElementsByClassName("btn")[2];
+            let img_c = document.getElementsByClassName("img-container")[2];
+            let output = document.getElementsByClassName("output")[2];
+            // btn4.innerHTML = "RIDING BICYCLE" + "<a href=''><img class='' img pb - 2' src='https://i.ibb.co/gzSHQpy/Bike.jpg'></a>";
+            output.classList.add("d-none");
+            output.classList.remove("d-block");
+
+            img_c.classList.remove("d-none");
+        }
+        function bikeRet() {
+            let btn4 = document.getElementsByClassName("btn")[3];
+            let img_c = document.getElementsByClassName("img-container")[3];
+            let output = document.getElementsByClassName("output")[3];
+            // btn4.innerHTML = "RIDING BICYCLE" + "<a href=''><img class='' img pb - 2' src='https://i.ibb.co/gzSHQpy/Bike.jpg'></a>";
+            output.classList.add("d-none");
+            output.classList.remove("d-block");
+
+            img_c.classList.remove("d-none");
+        }
+    </script>
+</body>
+
+</html>
