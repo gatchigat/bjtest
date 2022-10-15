@@ -79,6 +79,25 @@
         border-radius: 10px;
     }
 
+    footer {
+        font-size: 1.2rem;
+        color: #9bc2f5;
+        text-align: center;
+        padding: 20px 0 0;
+
+    }
+
+    footer a {
+        text-decoration: none;
+        color: #7196fc;
+    }
+
+    footer a span {
+        font-weight: 800;
+    }
+
+    /* UTILITIES */
+
     .center {
         text-align: center;
     }
@@ -138,7 +157,9 @@
 
             <p><span class="label pt-1">Contact No.:</span> <span class="value">09464074396</span></p>
 
-            <p><span class="label pt-1">Mother:</span> <span class="value">Kristal R. Coliflores</span></p>
+            <p><span class="label pt-1">Mother:</span> <span class="value">Kristal &ldquo;Tal&rdquo; R.
+                    Coliflores</span>
+            </p>
 
             <p><span class="label pt-1">Father:</span> <span class="value">Jhon Wesley Coliflores</span></p>
 
@@ -178,7 +199,13 @@
                 <p class="output d-none pt-2 center fw-600" onclick="bikeRet()"></p>
             </div>
         </div>
+        <footer>
+            <p class="center">Images from <a href="https://www.freepik.com/" target="_blank"
+                    class="footer-link">Freepik<span><sup>&copy;</sup></span></a>
+            </p>
+        </footer>
     </div>
+
 
     <script>
         function basketball() {
@@ -207,7 +234,7 @@
             let output = document.getElementsByClassName("output")[2];
             output.classList.remove("d-none");
             output.classList.add("d-block");
-            output.innerHTML = "WATCHING NETFLIX";
+            output.innerHTML = "WATCHING NETFLIX<sup>&reg;</sup>";
             img_c.classList.add("d-none");
         }
         function bike() {
@@ -229,7 +256,7 @@
 
             output.classList.add("d-none");
             output.classList.remove("d-block");
-            output.innerHTML = "RIDING BICYCLE";
+
             img_c.classList.remove("d-none");
         }
         function badmintonRet() {
